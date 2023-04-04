@@ -1,8 +1,31 @@
-import React from 'react'
+import React, { useState, createRef } from 'react'
 import './Homepage.css'
+import { Link, NavLink, Navigate } from 'react-router-dom'
 import AscsFooter from '../AscsFooter/AscsFooter'
 import Footer from '../Footer/Footer'
+import Slider from "react-slick";
+import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { Data } from './Data'
 const Homepage = () => {
+  const customeSlider = createRef();
+
+  const [sliderSettings, setSliderSettings] = useState({
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+
+  })
+  const gotoNext = () => {
+    customeSlider.current.slickNext()
+  }
+
+  const gotoPrev = () => {
+    customeSlider.current.slickPrev()
+  }
   return (
     <div className='homepage'>
       <div className='hero'>
@@ -19,30 +42,34 @@ const Homepage = () => {
 
 
       <div class="section-2-cards">
-        <div class="card">
-          <img src={require('../../Assests/service-card-01.jpg')} class="card-img-top" alt="..." />
-          <div class="card-body">
-            <b class="card-title">Warehousing, Storage <br /> & Distribution</b>
-            <p class="card-text">Project Management & <br /> Implementation support</p>
-            <a href="#" class="btn btn-warning">Read More</a>
+
+        <div className="App">
+
+          <Slider {...sliderSettings} ref={customeSlider}>
+            {Data.map((item) => (
+
+              <div className="card" key={item.id}>
+                <div className="card-top">
+                  <img src={item.img} alt={item.name} />
+                  <h6>{item.name}</h6>
+                </div>
+                <div className="card-bottom">
+                  <p>{item.t1} </p>
+                  <p>{item.t2} </p>
+                </div>
+                <div className='READMORE'>
+                  <Link className='ReadMore' to='/whatwedo'>ReadMore</Link>
+                </div>
+              </div>
+            ))}
+          </Slider>
+          <div className='buttons'>
+            <span className='arrow' onClick={() => gotoPrev()}><FaArrowCircleLeft /></span>
+            <span className='arrow' onClick={() => gotoNext()}><FaArrowCircleRight /></span>
+
           </div>
         </div>
-        <div class="card">
-          <img src={require('../../Assests/service-card-02.jpg')} class="card-img-top" alt="..." />
-          <div class="card-body">
-            <b class="card-title">Transportation & Integrated <br /> Logistics</b>
-            <p class="card-text">Primary Transportation <br /> Secondary Transportation</p>
-            <a href="#" class="btn btn-warning ">Read More</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src={require('../../Assests/service-card-03.jpg')} class="card-img-top" alt="..." />
-          <div class="card-body">
-            <b class="card-title">Product Management <br /> Solutions</b>
-            <p class="card-text"> Data Management <br />Order Management </p>
-            <a href="#" class="btn btn-warning">Read More</a>
-          </div>
-        </div>
+
       </div>
 
       <div class="section-3-mission">
@@ -62,7 +89,7 @@ const Homepage = () => {
               <span>among our employees, and strengthening our relationship </span>
               with customers and share-holders.
             </p>
-            <a href="#" class="btn btn-warning Learn-more">Learn More</a>
+            <NavLink to='/aboutus' className='btn btn-warning Learn-more'>ReadMore</NavLink>
           </div>
         </div>
         <img class='mission-img' src={require('../../Assests/mission (1).jpg')} alt="" />
@@ -86,7 +113,7 @@ const Homepage = () => {
               <span>promises we have made to our Clients, Investors,</span>
               Suppliers and Employees
             </p>
-            <a href="#" class="btn btn-warning Learn-more">Learn More</a>
+            <NavLink to='/aboutus' className='btn btn-warning Learn-more'>ReadMore</NavLink>
           </div>
         </div>
       </div>
@@ -111,7 +138,8 @@ const Homepage = () => {
             <img class="image-fluid" src={require("../../Assests/gallery-04.jpg")} alt="" />
           </div>
         </div>
-        <a style={{ marginTop: "25px", padding: "6px 30px" }} href="#" class="btn btn-warning">See More</a>
+        <NavLink to='/gallery' style={{ marginTop: "25px", padding: "6px 30px" }} className='btn btn-warning '>See More</NavLink>
+
       </div>
 
 

@@ -56,7 +56,6 @@
   top: 0;
   left: 0;
   padding: 0rem 12rem;
- 
 }
 @media (max-width: 600px) {
   .content {
@@ -184,7 +183,7 @@
 }
 
 /* //SECTION 2 CARDS */
-.section-2-cards {
+/* .section-2-cards {
   display: flex;
   position: relative;
   gap: 2rem;
@@ -362,14 +361,102 @@
 .card:hover {
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.9);
   /* transform: scale(1.009); */
-  transform: translateY(-4vh);
+/* transform: translateY(-4vh);
   animation: fall 2.5s forwards;
 }
 @keyframes fall {
   100% {
     transform: translateY(0);
   }
+} */
+
+.App {
+  width: 70%;
+  height: 80vh;
+  margin: 0 auto;
+  margin-top: 50px;
 }
+.slick-slide > div {
+  margin: 0 10px;
+}
+.slick-list {
+  margin: 0 -10px;
+}
+.card-top img {
+  width: 200px;
+  height: 170px;
+}
+.App .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(199, 198, 198);
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  overflow: hidden;
+  height: 450px;
+  color: rgb(0, 0, 0);
+  padding: 10px 10px;
+}
+.READMORE {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ReadMore {
+  text-align: center;
+  background-color: rgb(255, 174, 0);
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 5px 20px;
+  border-radius: 50px;
+}
+
+.card-top > img {
+  width: 100%;
+
+  object-fit: cover;
+}
+.card-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+}
+.card-top h6 {
+  font-size: 18px;
+  padding: 10px 0;
+  width: 190px;
+  line-height: 30px;
+  text-align: center;
+}
+.card-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 5px;
+}
+.arrow {
+  font-size: 30px;
+  padding: 10px;
+}
+.arrow:hover {
+  cursor: pointer;
+}
+
 /* section-3-mission */
 
 .section-3-mission {
@@ -462,7 +549,7 @@
 .values p {
   font-size: 15px;
   line-height: 28px;
-  opacity: .8;
+  opacity: 0.8;
 }
 @media (max-width: 900px) {
   .values {
