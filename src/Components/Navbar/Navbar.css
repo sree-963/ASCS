@@ -1,0 +1,19 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 12vh;
+  width: 100%;
+}
+.navbar img {
+  width: 200px;
+}
+.navbar .menu {
+  display: flex;
+  gap: 3rem;
+  position: relative;
+}
+a{
+    text-decoration: none;
+    color: black;
+}

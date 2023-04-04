@@ -1,0 +1,65 @@
+.form-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+}
+.Form form {
+  padding: 20px;
+}
+.contact-us h1 {
+  background-color: #c9e4f8;
+  width: 100%;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+.contactus-content {
+  padding: 1rem 3rem;
+}
+.contactus-content img {
+  width: 450px;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: black;
+  gap: 0.9rem;
+  width: 450px;
+  height: 250px;
+  color: white;
+  padding: 1rem 4rem;
+}
+
+.phonedetails span,
+.webiste span {
+  margin-left: 30px;
+}
+.phonedetails .fa {
+  color: rgb(228, 187, 8);
+}
+.webiste .fa {
+  color: rgb(228, 187, 8);
+}
+.website a {
+  color: white;
+}
+.phonedetails .fa-phone,
+.webiste .fa-globe {
+  font-size: 30px;
+}
+.phonedetails .fa-phone {
+  margin-left: -5px;
+}
+.form-group input {
+  width: 300px;
+  height: 7vh;
+  border: 1px solid black;
+}
+.form-group textarea {
+  border: 1px solid black;
+}

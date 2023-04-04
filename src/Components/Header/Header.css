@@ -1,0 +1,22 @@
+.header {
+  background-color: black;
+  height: 7vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5rem;
+}
+.header a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+.header .fa {
+  font-size: 15px;
+}
+.header-icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
