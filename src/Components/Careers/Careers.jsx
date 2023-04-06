@@ -123,7 +123,7 @@ const Careers = () => {
                 <input type="checkbox" class="form-check-input" id="exampleCheck1" required />
                 <label class="form-check-label" for="exampleCheck1">Check me out</label>
               </div>
-              <button type="submit" class="btn submit">Submit</button>
+              <button type="submit" class="btn btn-warning fw-bold submit">Submit</button>
             </form>
 
           </div>

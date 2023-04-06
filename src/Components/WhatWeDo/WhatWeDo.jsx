@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import './WhatWeDo.css'
+import AscsFooter from '../AscsFooter/AscsFooter';
+import Footer from '../Footer/Footer'
 const WhatWeDo = () => {
   const [seemore, setSeemore] = useState(false)
   const [readmore, setReadmore] = useState(false)
@@ -87,8 +89,11 @@ const WhatWeDo = () => {
   <span> • Capacity to audit warehouse ranging from 500 sqft to 3 lakhs sqft</span>
  </p>
  </div>
+ <video className='video' src={require('../../Animation videos/inventary.mp4')} autoPlay loop muted></video>
 </div>
 
+<AscsFooter/>
+<Footer/>
     </div>
   )
 }

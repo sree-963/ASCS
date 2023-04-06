@@ -17,6 +17,41 @@ const Homepage = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          // infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 680,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          // infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
 
   })
   const gotoNext = () => {
@@ -29,7 +64,7 @@ const Homepage = () => {
   return (
     <div className='homepage'>
       <div className='hero'>
-        <img className="heroimg" src={require('../../Assests/herobg.jpg')} alt="" />
+        <img className="heroimg image-fluid" src={require('../../Assests/herobg.jpg')} alt="" />
         <div class="overlay"></div>
         <div class="content">
           <p> Action Supply Chain Solutions Pvt Ltd (ASCS)</p>
@@ -40,7 +75,7 @@ const Homepage = () => {
         </div>
       </div>
 
-
+<div className='top-up'>
       <div class="section-2-cards">
 
         <div className="App">
@@ -199,6 +234,7 @@ const Homepage = () => {
 
       <AscsFooter />
       <Footer />
+      </div>
     </div >
   )
 }

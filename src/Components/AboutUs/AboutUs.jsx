@@ -7,7 +7,8 @@ const AboutUs = () => {
     <>
       <div className='aboutus'>
         <h1>About Us</h1>
-      </div>
+      </div >
+      <div className='bg'>
       <div className='about-content'>
         <p>GET TO KNOW US</p>
         <h4>Accuracy, Sincerity, Credibility and Sustainability.</h4>
@@ -30,13 +31,14 @@ const AboutUs = () => {
       </div>
 
       <div className='about-vision'>
-        <img src={require('../../Assests/about-vision.jpg')} alt="" />
-        <div className='aboutmission-content'>
+        <img  className='image-fluid'src={require('../../Assests/about-vision.jpg')} alt="" />
+        <div className='aboutvision-content'>
           <h1> Our Vision</h1>
           <p>Our vision is to redefine the Supply Chain by providing reliable and efficient services and to be the leading 3PL service provider in the nation.</p>
         </div>
-      </div>
 
+      </div>
+</div>
       <AscsFooter />
       <Footer />
 
