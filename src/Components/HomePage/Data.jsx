@@ -1,7 +1,7 @@
 export const Data = [
     {
         id: 1,
-        img: "https://t4.ftcdn.net/jpg/02/82/59/91/360_F_282599126_rJ3MKz8r2lLGBlvjUuzznoWfwvaep5eX.jpg",
+        img: "https://previews.123rf.com/images/unitonevector/unitonevector1905/unitonevector190500029/122832067-futuristic-warehouse-worker-flat-illustration-man-in-exoskeleton-carrying-boxes-cartoon-character.jpg",
         name: "Warehousing, Storage & Distribution",
         t1: "Project Management &",
         t2: "Implementation Support",
