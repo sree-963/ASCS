@@ -1,8 +1,36 @@
-import React from 'react'
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css'
 import AscsFooter from '../AscsFooter/AscsFooter'
 import Footer from '../Footer/Footer'
 const ContactUs = () => {
+
+  const [fname,setFname]=useState('')
+  const [lname,setlname]=useState('')
+  const [mobile,setMobile]=useState('')
+  const [email,setEmail]=useState('')
+  const [msg,setMsg]=useState('')
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_qxuqe3e', 'template_llk1kr3', form.current, 'u3VKSe_ZOElJO752r')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      alert('Your Details Has Sent Successfully')
+      setFname('')
+      setlname('')
+      setMobile('')
+      setEmail('')
+      setMsg('')
+    }
+
+
+
   return (
     <div className='contact-us'>
       <h1>Contact Us</h1>
@@ -11,7 +39,7 @@ const ContactUs = () => {
           <img src={require('../../Assests/addbox-image.jpg')} alt="" />
           <div className='details'>
             <h2>Call Us</h2>
-            <div className='phonedetails'>
+            <div className='phonedetails phone'>
               <a href="#" className='fa fa-phone'></a>
               <span>8341510555</span>
             </div>
@@ -26,41 +54,34 @@ const ContactUs = () => {
           </div>
 
         </div>
-        <div className='Form'>
-          <form>
-            <div style={{ display: "flex", gap: "1rem" }}>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Full Name</label>
-                <input type="email" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter FullName" required />
-
+        <div className='Contact-Form'>
+          <form action="" ref={form} onSubmit={sendEmail}>
+            <div className='fullname'>
+              <div className='first'>
+                <label htmlFor="">FirstName</label>
+                <input type="text"  name='user_firstname' value={fname} onChange={(e)=>setFname(e.target.value)}/>
               </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Mail" required />
-              </div>
-
-            </div>
-            <div style={{ display: "flex", gap: "1rem" }}>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Your ZIP Code</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Zipcode" required />
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Mobile Number</label>
-                <input type="tel" class="form-control" id="exampleInputPassword1" placeholder="Enter Mobile" required />
+              <div className='first'>
+                <label htmlFor="">LastName</label>
+                <input type="text" name='fuser_lastname' value={lname} onChange={(e)=>setlname(e.target.value)} />
               </div>
             </div>
-
-
-            <div class="form-group">
-              <label class="form-check-label" for="exampleCheck1">Your Message</label>
-
-              <textarea name="" id="" cols="60" class="form-control" rows="5"></textarea>
+            <div className='contact-details'>
+              <div className='first'>
+                <label htmlFor="">Contact</label>
+                <input type="tel" name='fuser_contact' value={mobile} onChange={(e)=>setMobile(e.target.value)} />
+              </div>
+              <div className='first'>
+                <label htmlFor="">Email</label>
+                <input type="email" name='fuser_email' value={email} onChange={(e)=>setEmail(e.target.value)} />
+              </div>
             </div>
-
-            <button type="submit" class="btn submit">SUBMIT YOUR ENQUERY </button>
+            <div className='textarea'>
+              <label htmlFor="">Message Us</label>
+              <textarea name="message" id="" cols="50" rows="5"  value={msg} onChange={(e)=>setMsg(e.target.value)}></textarea>
+            </div>
+            <button className='btn btn-success mt-3'>Submit</button>
           </form>
-
         </div>
       </div>
       <AscsFooter />

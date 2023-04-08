@@ -48,15 +48,23 @@
   justify-content: center;
   align-items: center;
 }
+.map h5{
+  font-size: 20px;
+}
 .address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   padding-top: 10px;
 }
 .address b,
 .address p {
-  font-size: 15px;
+  font-size: 17px;
   color: rgb(87, 87, 87);
   padding: 5px;
+  line-height: 30px;
 }
 @media (max-width: 470px) {
   .address b,
@@ -66,7 +74,7 @@
     text-align: center;
   }
   .address b {
-    font-size: 16px;
+    font-size: 20px;
     text-align: center;
   }
 }
@@ -95,8 +103,8 @@
 .sitelinks a {
   text-decoration: none;
   color: rgb(37, 36, 36);
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 630;
 }
 .sitelinks a:hover {
   color: red;
@@ -119,14 +127,17 @@
 .socialmedia h5,
 .contactus h5 {
   color: rgb(102, 100, 100);
+  font-size: 20px;
+  font-weight: 700;
 }
 @media (max-width: 470px) {
   .map h5,
   .links h5,
   .socialmedia h5,
   .contactus h5 {
-    font-size: 25px;
+    font-size: 22px;
     padding: 10px;
+    font-weight: 900;
     text-align: center;
   }
 }
@@ -172,13 +183,16 @@
   gap: 0.3rem;
 }
 .icons span {
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 500;
   color: rgb(109, 107, 107);
 }
 @media (max-width: 470px) {
   .icons span {
     font-size: 19px;
+  }
+  .links{
+    margin-top: -40px;
   }
 }
 .fa {

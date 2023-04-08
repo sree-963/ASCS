@@ -17,6 +17,8 @@
 a {
   text-decoration: none;
   color: black;
+  font-size: 19px;
+  font-weight: 640;
 }
 .hamburger {
   display: none;

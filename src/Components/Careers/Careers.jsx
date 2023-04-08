@@ -1,8 +1,34 @@
-import React from 'react'
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './Career.css'
 import AscsFooter from '../AscsFooter/AscsFooter'
 import Footer from '../Footer/Footer'
 const Careers = () => {
+
+  const [fname,setFname]=useState('')
+  const [lname,setlname]=useState('')
+  const [mobile,setMobile]=useState('')
+  const [email,setEmail]=useState('')
+  const [msg,setMsg]=useState('')
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_qxuqe3e', 'template_llk1kr3', form.current, 'u3VKSe_ZOElJO752r')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      alert('Your Details Has Sent Successfully')
+      setFname('')
+      setlname('')
+      setMobile('')
+      setEmail('')
+      setMsg('')
+    }
+
   return (
     <div className='careers'>
       <h1>Careers</h1>
@@ -87,49 +113,46 @@ const Careers = () => {
           <h2>Ready For Your New Job?</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin semper faucibus velit.</p>
           <div>
-            <form>
-              <div style={{ display: "flex", gap: "1rem" }}>
-                <div class="form-group">
+            <form ref={form} onSubmit={sendEmail}>
+              <div className='Name' style={{ display: "flex", gap: "1rem" }}>
+                <div class="Form-group Input">
                   <label for="exampleInputEmail1">First Name</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter FirstName" required />
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter FirstName"  name='user_firstname' value={fname} onChange={(e)=>setFname(e.target.value)}  required />
 
                 </div>
-                <div class="form-group">
+                <div class="Form-group Input">
                   <label for="exampleInputEmail1">Last Name</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter LastName" required />
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter LastName"  name='fuser_lastname' value={lname} onChange={(e)=>setlname(e.target.value)} required />
                 </div>
 
               </div>
 
-              <div style={{ display: "flex", gap: "1rem" }}>
-                <div class="form-group">
+              <div className='Name' style={{ display: "flex", gap: "1rem" }}>
+                <div class="Form-group Input">
                   <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required />
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"  name='fuser_email ' value={email} onChange={(e)=>setEmail(e.target.value)} required />
                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
-                <div class="form-group">
+                <div class="Form-group Input">
                   <label for="exampleInputPassword1">Mobile Number</label>
-                  <input type="tel" class="form-control" id="exampleInputPassword1" placeholder="Enter Mobile" required />
+                  <input type="tel" class="form-control" id="exampleInputPassword1"  name='fuser_contact' value={mobile} onChange={(e)=>setMobile(e.target.value)} placeholder="Enter Mobile" required />
                 </div>
               </div>
 
 
-              <div class="form-group">
+              <div class="Form-group Input">
                 <label class="form-check-label" for="exampleCheck1">Message</label>
 
-                <textarea name="" id="" cols="50" class="form-control" rows="5"></textarea>
+                <textarea name="message" id="" cols="50" class="form-control" rows="5"   value={msg} onChange={(e)=>setMsg(e.target.value)}></textarea>
               </div>
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1" required />
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-              </div>
+              
               <button type="submit" class="btn btn-warning fw-bold submit">Submit</button>
             </form>
 
           </div>
         </div>
       </div>
-      <div className="" style={{ padding: "1.1rem 0" }}>
+      <div className="" style={{ padding: "0rem 0" }}>
         <AscsFooter />
         <Footer />
       </div>

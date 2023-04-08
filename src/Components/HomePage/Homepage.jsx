@@ -28,9 +28,9 @@ const Homepage = () => {
         }
       },
       {
-        breakpoint: 680,
+        breakpoint: 800,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
           // infinite: true,
           dots: true
@@ -118,7 +118,7 @@ const Homepage = () => {
           </div>
           <div class="values">
             <p>At ‘ASCS’ we are stern about our responsibilities to act
-              <span>with integrity and give back. By fostering a culture of</span>
+              <span>with integrity and give back. By fostering a culture of </span>
               <span>implementing sustainability and commitment where we</span>
               <span>work, it adds to the sense of pride and collective spirit</span>
               <span>among our employees, and strengthening our relationship </span>
@@ -142,11 +142,11 @@ const Homepage = () => {
           </div>
           <div class="values">
             <p>The values at the heart of ASCS culture are honesty, taking
-              <span>ownership, doing team work and win the confidence of our</span>
+              <span>ownership, doing team work and win the confidence of our </span>
               <span>Client / Business Partner. We seek, encourage, celebrate </span>
               <span>and reward these values because they are essential to the</span>
-              <span>promises we have made to our Clients, Investors,</span>
-              Suppliers and Employees
+              <span>promises we have made to our Clients, Investors, </span>
+              Suppliers and Employees.
             </p>
             <NavLink to='/aboutus' className='btn btn-warning Learn-more'>ReadMore</NavLink>
           </div>
@@ -173,7 +173,7 @@ const Homepage = () => {
             <img class="image-fluid" src={require("../../Assests/gallery-04.jpg")} alt="" />
           </div>
         </div>
-        <NavLink to='/gallery' style={{ marginTop: "25px", padding: "6px 30px" }} className='btn btn-warning '>See More</NavLink>
+        <NavLink to='/gallery' style={{ marginTop: "25px", padding: "6px 30px" }} className='btn btn-warning seemore '>See More</NavLink>
 
       </div>
 

@@ -35,3 +35,27 @@ margin: 10px;
 .client-images img:hover{
   transform: scale(1.009);
 }
+@media(max-width:1050px){
+  .client-images img{
+    width: 400px;
+  }
+}
+@media(max-width:830px){
+  .client-images img{
+    width: 300px;
+  }
+}
+@media(max-width:640px){
+  .client-images{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .client-images img{
+    width: 80%;
+  }
+  .whoweserve h1{
+    height: 15vh;
+    font-size: 45px;
+  }
+}

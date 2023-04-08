@@ -35,7 +35,7 @@
 .openjobs img {
   object-fit: cover;
   width: 100%;
-  height: 135vh;
+  height: 120vh;
   position: absolute;
 }
 .openjobs-content {
@@ -85,7 +85,7 @@
   font-size: 15px;
 }
 .recruitmentprocess {
-  padding: 5rem 0;
+  padding: 10rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -96,6 +96,9 @@
 }
 .interview-process {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 4rem;
 }
 .interview {
@@ -129,31 +132,181 @@
 .job-banner img {
   object-fit: cover;
   width: 100%;
-  height: 120vh;
+  height: 100vh;
   position: absolute;
 }
 .job-banner .job-content {
   position: relative;
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* flex-wrap: wrap; */
   padding: 5rem 0;
   gap: 1rem;
   color: white;
+}
+.job-banner{
+  display: flex;
+  flex-direction: column;
 }
 .job-content h2 {
   color: white;
   font-size: 50px;
 }
-.job-content p{
+.job-content p {
+  width: 500px;
+  text-align: center;
+}
+.form-group {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+ .Input input{
+  width: 300px;
+  height: 6vh;
+  margin: 10px 0 15px 0;
+  padding: 1rem;
+  
+ }
+.submit {
+  margin-top: 10px;
+}
+@media (max-width: 1225px) {
+  .openjob-1 {
     width: 500px;
+    height: 18vh;
+  }
+  .openjob-1 h2 {
+    font-size: 25px;
+  }
+  .openjob-1 p {
+    font-size: 15px;
+  }
+  .openjobs img {
+    height: 100vh;
+  }
+}
+@media (max-width: 1200px) {
+  .interview-process {
+    gap: 10px;
+  }
+}
+@media (max-width: 1080px) {
+  .openjob-1 {
+    width: 400px;
+    height: 15vh;
+  }
+  .openjobs img {
+    height: 90vh;
+  }
+  .recruitmentprocess {
+    padding: 6rem 0;
+  }
+  .interview {
+    padding: 1rem 0;
+  }
+}
+@media (max-width: 890px) {
+  .openjob-1 {
+    width: 320px;
+    height: 15vh;
+    padding: 2rem 30px;
+  }
+  .recruitmentprocess h2 {
     text-align: center;
+    padding: 0 2rem;
+  }
+  .career-content img {
+    width: 350px;
+    height: 350px;
+  }
+
+  .career-content h2 {
+    width: 360px;
+    font-size: 35px;
+  }
+  .career-content p {
+    width: 400px;
+    line-height: 33px;
+  }
 }
-.form-group{
-    padding: 10px 0 ;
+@media (max-width: 780px) {
+  .career-content {
+    flex-direction: column;
+  }
+  .career-content img {
+    width: 90%;
+    height: 40vh;
+  }
+  .career-content h2 {
+    width: 100%;
+    font-size: 40px;
+    padding: 1rem 3rem;
+    text-align: center;
+  }
+  .career-content p {
+    width: 100%;
+    line-height: 33px;
+    padding: 0rem 3rem;
+  }
 }
-.submit{
-    margin-top: 10px;
+@media (max-width: 720px) {
+  .open-job{
+    flex-direction: column;
+  }
+  .openjobs img {
+    height: 150vh;
+  }
+  .openjob-1 {
+    width: 80vw;
+    height: 15vh;
+  }
+}
+@media(max-width:620px){
+.Name{
+  flex-direction: column;
+}
+.job-content h2{
+  text-align: center;
+  padding: 2rem 3rem;
+}
+.Input input{
+  width: 80vw;
+  
+ }
+
+}
+@media(max-width:475px){
+  .job-content p{
+    width: 300px;
+  }
+  .job-content h2{
+    font-size: 30px;
+  }
+  .Input textarea{
+    width: 80vw;
+    height: 10vh;
+  }
+  .career-content-1 h2{
+font-size: 30px;
+  }
+  .careers h1 {
+   height: 14vh;
+    font-size: 45px;
+  }
+  .career-content img{
+    height: 30vh;
+  }
+  .openjobs img{
+    height: 150vh;
+  }
+  .Input input{
+    margin: 0px 0 9px 0;
+    padding: 1rem;
+    
+   }
 }

@@ -28,24 +28,25 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: rgb(238, 238, 238);
+
 }
 .aboutmission-content {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   padding: 1rem 2.2rem;
-  box-shadow: 0px -7px 3px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0px -7px 3px rgba(0, 0, 0, 0.5); */
 }
 .aboutmission-content p {
-  width: 350px;
+  width: 400px;
   line-height: 33px;
 }
 .about-values {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding-left: 6rem;
+  padding-left: 4rem;
+  padding-top: 4rem;
 }
 .aboutvalues-content {
   display: flex;
@@ -53,7 +54,7 @@
   gap: 1rem;
   padding: 1rem 2.2rem;
 
-  box-shadow: 0px -7px 10px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0px -7px 10px rgba(0, 0, 0, 0.5); */
 }
 .aboutvalues-content p {
   width: 400px;
@@ -61,13 +62,13 @@
   /* margin-right: 100px; */
 }
 .aboutvaluesimg {
-  width: 650px;
+  width: 550px;
 }
 .about-vision {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 2rem 0;
+  padding: 5rem 0;
   margin-left: -60px;
 }
 .aboutvision-content {
@@ -75,14 +76,14 @@
   flex-direction: column;
   gap: 1rem;
   padding: 1rem 3rem;
-  box-shadow: 0px -7px 10px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0px -7px 10px rgba(0, 0, 0, 0.5); */
 }
 .aboutvision-content p {
   width: 350px;
   line-height: 33px;
 }
 .about-vision img {
-  width: 420px;
+  width: 450px;
 }
 @media (max-width: 920px) {
   .about-mission {
@@ -131,5 +132,14 @@
 @media(max-width:700px){
   .about-content{
     padding: 1rem 2rem;
+  }
+}
+
+@media(max-width:450px){
+  .about-vision,.about-values{
+    padding: 2rem 0;
+  }
+  .about-content h4{
+    line-height: 35px;
   }
 }
