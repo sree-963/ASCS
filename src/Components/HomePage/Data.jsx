@@ -1,7 +1,7 @@
 export const Data = [
     {
         id: 1,
-        img: "http://visualwits.com/ASCS/assets/images/service-card-01.jpg",
+        img: "https://t4.ftcdn.net/jpg/02/82/59/91/360_F_282599126_rJ3MKz8r2lLGBlvjUuzznoWfwvaep5eX.jpg",
         name: "Warehousing, Storage & Distribution",
         t1: "Project Management &",
         t2: "Implementation Support",
@@ -10,7 +10,7 @@ export const Data = [
     },
     {
         id: 2,
-        img: "http://visualwits.com/ASCS/assets/images/service-card-02.jpg",
+        img: "https://i0.wp.com/www.coolingindia.in/wp-content/uploads/2023/01/advances-cold-chain.jpg?fit=792%2C612&ssl=1",
         name: "Transportation & Integrated Logistics",
         t1: "Primary Transportation",
         t2: "Secondary Transportation",
@@ -19,7 +19,7 @@ export const Data = [
     },
     {
         id: 3,
-        img: "http://visualwits.com/ASCS/assets/images/service-card-03.jpg",
+        img: "https://www.medphine.com/wp-content/uploads/2022/09/25046534_7012001-1024x788.jpg",
         name: "Product Management Solutions",
         t1: "Data Management  &",
         t2: "Order Management",
