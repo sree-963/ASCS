@@ -716,3 +716,8 @@ p b {
     margin-top: 0;
   }
 }
+.backtotop:hover{
+cursor: pointer;
+/* scroll-behavior: smooth; */
+transform: scale(1.08);
+}

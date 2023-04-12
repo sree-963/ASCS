@@ -3,5 +3,10 @@
   margin: 0;
   padding: 0;
   font-weight: 550;
+  
+}
+body{
+  width: 100vw;
+  overflow-x: hidden
 }
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");

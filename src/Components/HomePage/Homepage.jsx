@@ -10,6 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { Data } from './Data'
 import Aos from 'aos';
 import 'aos/dist/aos.css'
+import BacktoTop from '../BacktoTop/BacktoTop'
 const Homepage = () => {
   useEffect(()=>{
     Aos.init()
@@ -239,7 +240,9 @@ const Homepage = () => {
 
       <AscsFooter />
       <Footer />
+      <BacktoTop/>
       </div>
+      
     </div >
   )
 }
