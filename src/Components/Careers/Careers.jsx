@@ -1,9 +1,14 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState,useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import './Career.css'
 import AscsFooter from '../AscsFooter/AscsFooter'
 import Footer from '../Footer/Footer'
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 const Careers = () => {
+  useEffect(()=>{
+    Aos.init()
+  })
 
   const [fname,setFname]=useState('')
   const [lname,setlname]=useState('')
@@ -46,17 +51,17 @@ const Careers = () => {
             <h2>Open Jobs</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin semper faucibus <br /> velit, vel scelerisque mauris porttitor et.</p>
           </div>
-          <div className='open-job'>
+          <div className='open-job' data-aos='fade-up'>
             <div className='openjob-1'>
               <h2>Brand Strategist </h2>
               <p>Orlando, Florida, USA</p>
             </div>
-            <div className='openjob-1'>
+            <div className='openjob-1' >
               <h2>Digital Marketing Manager </h2>
               <p>Orlando, Florida, USA</p>
             </div>
           </div>
-          <div className='open-job'>
+          <div className='open-job' data-aos='zoom-in-up'>
             <div className='openjob-1'>
               <h2>Web Developer </h2>
               <p>Orlando, Florida, USA</p>
@@ -67,7 +72,7 @@ const Careers = () => {
               <p>Orlando, Florida, USA</p>
             </div>
           </div>
-          <div className='open-job'>
+          <div className='open-job' data-aos='flip-right'>
             <div className='openjob-1'>
               <h2>Good Adwords Specialist</h2>
               <p>Orlando, Florida, USA</p>
@@ -79,7 +84,7 @@ const Careers = () => {
           </div>
         </div>
       </div>
-      <div className='recruitmentprocess'>
+      <div className='recruitmentprocess' data-aos='flip-left'>
         <h2>What Does The Recruitment Process Look Like?</h2>
         <div className='interview-process'>
           <div className='interview'>

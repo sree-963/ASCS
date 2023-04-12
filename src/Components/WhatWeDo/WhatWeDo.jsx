@@ -1,8 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect} from 'react'
 import './WhatWeDo.css'
 import AscsFooter from '../AscsFooter/AscsFooter';
 import Footer from '../Footer/Footer'
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+
 const WhatWeDo = () => {
+  useEffect(()=>{
+    Aos.init()
+  })
   const [seemore, setSeemore] = useState(false)
   const [readmore, setReadmore] = useState(false)
   return (
@@ -12,7 +18,7 @@ const WhatWeDo = () => {
         <p>GET TO KNOW US</p>
         <h2>INTEGRATED SUPPLY CHAIN SOLUTIONS (ISCS)</h2>
       </div>
-      <div className='warehouse'>
+      <div className='warehouse' data-aos='zoom-in-up'>
         <div className='ware-storage'>
           <h2>Warehousing, Storage & Distribution</h2>
           <p>Project Management & Implementation support at Fulfilment Centre
@@ -24,7 +30,7 @@ const WhatWeDo = () => {
       </div>
 
       <div className='supplychain'>
-        <div className='supply-content'>
+        <div className='supply-content' data-aos='zoom-in-up'>
           <h2>Supply Chain design and Optimisation <br /> of Costs at Hubs / WH</h2>
           <p>Supply chain cost optimization is about managing costs in a way that helps achieve the best possible return on investment while ensuring a steady supply.  In its essence, supply chain cost optimization helps company reveal the hidden expenses through improving the supply chain performance. There’s an ideal world where everything operates as planned and then there’s the reality where: <br />
 
@@ -42,10 +48,10 @@ const WhatWeDo = () => {
             <span className='readmore' onClick={() => setSeemore((prev) => !prev)}>{seemore ? "ReadLess" : "Readmore"}</span></p>
 
         </div>
-        <img className='chain' src="https://www.kepler-consulting.com/wp-content/uploads/2020/11/functions-of-the-supply-chain-1600x0-c-default.png" alt="" />
+        <img className='chain' data-aos='zoom-in-up' src="https://www.kepler-consulting.com/wp-content/uploads/2020/11/functions-of-the-supply-chain-1600x0-c-default.png" alt="" />
       </div>
 
-      <div className='equipment'>
+      <div className='equipment' data-aos='zoom-in-up'>
         <div className='equipment-content'>
           <h2>Equipment and Labour utilisation</h2>
           <p>Warehousing operations are becoming more complex and challenging with respect to the space availability and its optimum utilisation. Although the best practices vary from industry to industry, there are some best practices from experts in material handling, warehousing and logistics management.  The methodology of utilising the warehouse optimally have been coined as “SPACE”  <br />
@@ -62,10 +68,10 @@ const WhatWeDo = () => {
           </p>
 
         </div>
-        <video className='video' src={require('../../Animation videos/Equipement and labour util.mp4')} loop autoPlay muted ></video>
+        <video data-aos='zoom-in-up' className='video' src={require('../../Animation videos/Equipement and labour util.mp4')} loop autoPlay muted ></video>
       </div>
 
-      <div className='transportation'>
+      <div className='transportation' data-aos='zoom-in-up'>
         <div className='transport-content'>
           <h2>Transportation & Integrated Logistics</h2>
           <span>•	Primary Transportation</span>
@@ -75,10 +81,10 @@ const WhatWeDo = () => {
           <span>• Order Management</span>
           <span>• Inventory Management</span>
         </div>
-        <video className='video' src={require('../../Animation videos/transport.mp4')} autoPlay loop muted></video>
+        <video data-aos='zoom-in-up' className='video' src={require('../../Animation videos/transport.mp4')} autoPlay loop muted></video>
       </div>
 
-<div className='inventory-control'>
+<div className='inventory-control' data-aos='zoom-in-up'>
  <div className='inventorycontent'>
  <h2>INVENTORY CONTROL</h2>
  <p>
@@ -89,7 +95,7 @@ const WhatWeDo = () => {
   <span> • Capacity to audit warehouse ranging from 500 sqft to 3 lakhs sqft</span>
  </p>
  </div>
- <video className='video' src={require('../../Animation videos/inventary.mp4')} autoPlay loop muted></video>
+ <video data-aos='zoom-in-up' className='video' src={require('../../Animation videos/inventary.mp4')} autoPlay loop muted></video>
 </div>
 
 <AscsFooter/>

@@ -7,6 +7,9 @@
   align-items: center;
   padding-top: 0.5rem;
 }
+.whatsapp:hover{
+  transform: scale(1.08);
+}
 @media (max-width: 420px) {
   .ascsfooter {
     flex-direction: column;

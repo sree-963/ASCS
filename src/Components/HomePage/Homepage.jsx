@@ -1,4 +1,4 @@
-import React, { useState, createRef } from 'react'
+import React, { useState, createRef, useEffect } from 'react'
 import './Homepage.css'
 import { Link, NavLink, Navigate } from 'react-router-dom'
 import AscsFooter from '../AscsFooter/AscsFooter'
@@ -8,7 +8,12 @@ import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Data } from './Data'
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 const Homepage = () => {
+  useEffect(()=>{
+    Aos.init()
+  })
   const customeSlider = createRef();
 
   const [sliderSettings, setSliderSettings] = useState({
@@ -107,7 +112,7 @@ const Homepage = () => {
 
       </div>
 
-      <div class="section-3-mission">
+      <div class="section-3-mission" data-aos='zoom-in' >
         <div class="mission">
           <div class="keep-improving">
             <p>KEEP IMPROVING OURSELVES</p>
@@ -127,10 +132,10 @@ const Homepage = () => {
             <NavLink to='/aboutus' className='btn btn-warning Learn-more'>ReadMore</NavLink>
           </div>
         </div>
-        <img class='mission-img' src={require('../../Assests/mission (1).jpg')} alt="" />
+        <img class='mission-img'  src={require('../../Assests/mission (1).jpg')} alt="" />
       </div>
 
-      <div class="section-3-mission ourvalues">
+      <div class="section-3-mission ourvalues" data-aos='zoom-in-up' >
         <img class='mission-img' src={require('../../Assests/our-values.jpg')} alt="" />
         <div class="mission">
           <div class="keep-improving">
@@ -186,7 +191,7 @@ const Homepage = () => {
           <hr />
         </div>
       </div>
-      <div class="ourclients">
+      <div class="ourclients" data-aos='flip-down'>
 
         <div class="client">
           <img src={require('../../Assests/client1.jpg')} alt="" />
