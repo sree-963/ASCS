@@ -25,23 +25,24 @@ a {
 @media (max-width: 875px) {
   .menu {
     position: absolute;
-    top: 13vh;
-    height: 80vh;
+    top: 12.5vh;
+    max-height: 55vh;
     left: -100%;
-    width: 78%;
+    width: 80%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-  
+    /* align-items: center; */
+    justify-content: flex-start;
+    line-height: 15px;
     padding: 22vw;
     transition: all 0.5s ease-in-out;
     z-index: 9999;
-    background-color: rgba(1, 1, 1,.85);
-   
+    background-color: rgba(1, 1, 1, 0.92);
+    overflow: scroll;
     font-size: 25px;
- 
     border-radius: 10px;
   }
+  
   .hamburger {
     display: block;
   }
@@ -49,30 +50,30 @@ a {
     color: white;
   }
   .menu a {
+   
     transition: all 0.3s ease-in-out;
-    margin-left: -35px;
+    margin-left: 0px;
+    margin-top: -10px;
     color: rgb(0, 198, 253);
     font-weight: 700;
   }
   .active {
     transition: all 0.5s ease-in-out;
-    left: 35vw;
+    left: 0;
     /* padding-left:rem; */
   }
 }
 @media (max-width: 450px) {
   .menu {
     font-size: 23px;
-   
-    /* margin-top: -50px; */
   }
-  .cross{
+  .cross {
     position: absolute;
-    top: 30px;
-    left: 80px;
+    top: 45px;
+    left: 78%;
     font-weight: bold;
   }
-  .cross:hover{
+  .cross:hover {
     cursor: pointer;
   }
 }
