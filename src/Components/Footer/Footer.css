@@ -9,6 +9,8 @@
     flex-direction: column;
   }
 }
+
+
 .Map-links {
   display: flex;
   gap: 10rem;
@@ -89,7 +91,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
     padding: 0 2rem;
   }
 }
@@ -108,7 +110,7 @@
 }
 .sitelinks a:hover {
   color: red;
-  font-weight: 600;
+  font-weight: 800;
 }
 @media (max-width: 700px) {
   .links a {
@@ -150,6 +152,7 @@
 @media (max-width: 700px) {
   .socialmedia {
     flex-direction: column;
+ 
   }
   .media {
     display: flex;
@@ -157,8 +160,12 @@
   }
 }
 @media (max-width: 470px) {
-  .socialmedia {
-    align-items: center;
+  .socialmedia  {
+    align-items: flex-start;
+    padding: 10px;
+  }
+  .socialmedia h5{
+    margin-left: 50px;
   }
 }
 @media (max-width: 570px) {

@@ -35,7 +35,6 @@ const Careers = () => {
     setEmail('')
     setMsg('')
   }
-
   return (
     <div className='careers'>
       <h1>Careers</h1>

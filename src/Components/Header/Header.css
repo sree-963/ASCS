@@ -14,9 +14,16 @@
 .header .fa {
   font-size: 15px;
 }
-.header-icons{
+.header-icons {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+@media (max-width: 450px) {
+  .header {
+    justify-content: center;
+    gap: 8rem;
+    padding: 0 10px;
+  }
 }

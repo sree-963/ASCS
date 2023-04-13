@@ -95,6 +95,7 @@
 .readmore {
   text-align: center;
   margin-left: 170px;
+  font-weight: bold;
   color: rgb(250, 0, 0);
 }
 .readmore:hover {
@@ -127,6 +128,7 @@
 .Readmore {
   margin-left: 170px;
   color: red;
+  font-weight: bold;
 }
 .Readmore:hover {
   cursor: pointer;
@@ -275,5 +277,8 @@
     font-size: 30px;
     font-weight: 700;
     padding: 0 1rem;
+  }
+  .readmore,.Readmore{
+    margin-left: 130px;
   }
 }

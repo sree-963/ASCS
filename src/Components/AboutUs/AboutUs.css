@@ -142,4 +142,7 @@
   .about-content h4{
     line-height: 35px;
   }
+  .aboutus h1{
+    height: 18vh;
+  }
 }
