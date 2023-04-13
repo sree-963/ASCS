@@ -9,7 +9,7 @@ const Footer = () => {
           <h5>Address</h5>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15221.765651628471!2d78.3989826!3d17.4864298!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb914b1e7c543b%3A0x6dac187770a5acf1!2sAction%20Supply%20Chain%20Solutions%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1679730565006!5m2!1sen!2sin"
-            class="ascsmap" width="300" height="250" style={{ border: "0" }} allowfullscreen="" loading="lazy"
+            class="ascsmap" title='Action Supply Chain Solutions' width="300" height="250" style={{ border: "0" }} allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
           <div class="address">
             <b>Action Supply Chain Solutions Pvt. Ltd.</b>
@@ -38,26 +38,26 @@ const Footer = () => {
         <div class="socialmedia">
           <h5>Social Media</h5>
           <div class="icons">
-            <a href="#" class="fa fa-facebook"></a>
+            <a href="facebook.com" class="fa fa-facebook"></a>
             <span>Follow Us On Facebook</span>
           </div>
           <div class="icons">
-            <a href="#" class="fa fa-instagram"></a>
+            <a href="instagram.com" class="fa fa-instagram"></a>
             <span>Follow Us On Instagram</span>
           </div>
           <div class="icons">
-            <a href="#" class="fa fa-linkedin"></a>
+            <a href="linkedin.com" class="fa fa-linkedin"></a>
             <span>Follow Us On Linkedin</span>
           </div>
         </div>
         <div class="contactus">
           <h5>Contact Us</h5>
           <div class="phone">
-            <a href="#" class="fa Fa fa-phone"></a>
+            <i class="fa Fa fa-phone"></i>
             <span>8341510555</span>
           </div>
           <div class="mail">
-            <a href="#" class="fa fa-envelope"></a>
+            <i  class="fa fa-envelope"></i>
             <span> info@actionsupplychain.com</span>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import React, { useState, createRef, useEffect } from 'react'
 import './Homepage.css'
-import { Link, NavLink, Navigate } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import AscsFooter from '../AscsFooter/AscsFooter'
 import Footer from '../Footer/Footer'
 import Slider from "react-slick";
@@ -17,7 +17,7 @@ const Homepage = () => {
   })
   const customeSlider = createRef();
 
-  const [sliderSettings, setSliderSettings] = useState({
+  const [sliderSettings] = useState({
     infinite: false,
     speed: 500,
     slidesToShow: 3,

@@ -40,29 +40,29 @@ const ContactUs = () => {
           <div className='details'>
             <h2>Call Us</h2>
             <div className='phonedetails phone'>
-              <a href="#" className='fa fa-phone'></a>
+              <i className='fa fa-phone'></i>
               <span>8341510555</span>
             </div>
             <div className='webiste'>
-              <a href="#" className='fa fa-globe'></a>
+              <i className='fa fa-globe'></i>
               <span>www.actionsupplychain.com</span>
             </div>
             <div className='phonedetails'>
-              <a href="#" className='fa fa-envelope'></a>
+              <i className='fa fa-envelope'></i>
               <span>info@actionsupplychain.com</span>
             </div>
           </div>
 
         </div>
         <div className='Contact-Form'>
-          <form action="" ref={form} onSubmit={sendEmail}>
+          <form  ref={form} onSubmit={sendEmail}>
             <div className='fullname'>
               <div className='first'>
-                <label htmlFor="">FirstName</label>
+                <label>FirstName</label>
                 <input type="text"  name='user_firstname' value={fname} onChange={(e)=>setFname(e.target.value)}/>
               </div>
               <div className='first'>
-                <label htmlFor="">LastName</label>
+                <label>LastName</label>
                 <input type="text" name='fuser_lastname' value={lname} onChange={(e)=>setlname(e.target.value)} />
               </div>
             </div>
@@ -72,12 +72,12 @@ const ContactUs = () => {
                 <input type="tel" name='fuser_contact' value={mobile} onChange={(e)=>setMobile(e.target.value)} />
               </div>
               <div className='first'>
-                <label htmlFor="">Email</label>
+                <label>Email</label>
                 <input type="email" name='fuser_email' value={email} onChange={(e)=>setEmail(e.target.value)} />
               </div>
             </div>
             <div className='textarea'>
-              <label htmlFor="">Message Us</label>
+              <label >Message Us</label>
               <textarea name="message" id="" cols="50" rows="5"  value={msg} onChange={(e)=>setMsg(e.target.value)}></textarea>
             </div>
             <button className='btn btn-success mt-3'>Submit</button>
