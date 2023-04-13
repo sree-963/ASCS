@@ -3,7 +3,6 @@ import emailjs from '@emailjs/browser';
 import './Contact.css'
 import AscsFooter from '../AscsFooter/AscsFooter'
 import Footer from '../Footer/Footer'
-import Input from '../../Input';
 const ContactUs = () => {
 
   const [fname,setFname]=useState('')
@@ -79,7 +78,7 @@ const ContactUs = () => {
               <textarea name="message" id="" cols="50" rows="5"  value={msg} onChange={(e)=>setMsg(e.target.value)}></textarea>
             </div>
        
-            <input type='submit' value="Send" className='btn btn-success mt-3'/>
+            <input type='submit' value="Send" className='btn btn-success mt-3 px-5 fw-bold'/>
           </form>
         </div>
       </div>
@@ -87,6 +86,8 @@ const ContactUs = () => {
       <AscsFooter />
       <Footer />
     </div>
+
+   
   )
 }
 

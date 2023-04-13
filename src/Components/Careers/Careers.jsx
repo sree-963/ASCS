@@ -10,8 +10,6 @@ const Careers = () => {
   useEffect(() => {
     Aos.init()
   })
- 
-
 
   const [fname, setFname] = useState('')
   const [lname, setlname] = useState('')
@@ -154,7 +152,7 @@ const Careers = () => {
                   <textarea name="message" id="" cols="50" class="form-control" rows="5" value={msg} onChange={(e) => setMsg(e.target.value)}></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-warning fw-bold submit">Submit</button>
+                <button type="submit" class="btn btn-warning fw-bold submit px-4">Submit</button>
             </form>
 
           </div>
