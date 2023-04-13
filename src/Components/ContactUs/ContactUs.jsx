@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import './Contact.css'
 import AscsFooter from '../AscsFooter/AscsFooter'
 import Footer from '../Footer/Footer'
+import Input from '../../Input';
 const ContactUs = () => {
 
   const [fname,setFname]=useState('')
@@ -15,7 +16,7 @@ const ContactUs = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_qxuqe3e', 'template_llk1kr3', form.current, 'u3VKSe_ZOElJO752r')
+    emailjs.sendForm('service_qxuqe3e', 'template_llk1kr3', form.current, 'u3VKSe_ZOElJO752r',)
       .then((result) => {
           console.log(result.text);
       }, (error) => {
@@ -28,9 +29,6 @@ const ContactUs = () => {
       setEmail('')
       setMsg('')
     }
-
-
-
   return (
     <div className='contact-us'>
       <h1>Contact Us</h1>
@@ -80,10 +78,12 @@ const ContactUs = () => {
               <label >Message Us</label>
               <textarea name="message" id="" cols="50" rows="5"  value={msg} onChange={(e)=>setMsg(e.target.value)}></textarea>
             </div>
-            <button className='btn btn-success mt-3'>Submit</button>
+       
+            <input type='submit' value="Send" className='btn btn-success mt-3'/>
           </form>
         </div>
       </div>
+      
       <AscsFooter />
       <Footer />
     </div>

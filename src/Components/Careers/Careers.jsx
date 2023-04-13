@@ -1,4 +1,4 @@
-import React, { useRef, useState,useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import './Career.css'
 import AscsFooter from '../AscsFooter/AscsFooter'
@@ -6,33 +6,37 @@ import Footer from '../Footer/Footer'
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 const Careers = () => {
-  useEffect(()=>{
+
+  useEffect(() => {
     Aos.init()
   })
+ 
 
-  const [fname,setFname]=useState('')
-  const [lname,setlname]=useState('')
-  const [mobile,setMobile]=useState('')
-  const [email,setEmail]=useState('')
-  const [msg,setMsg]=useState('')
+
+  const [fname, setFname] = useState('')
+  const [lname, setlname] = useState('')
+  const [mobile, setMobile] = useState('')
+  const [email, setEmail] = useState('')
+  const [msg, setMsg] = useState('')
+
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_qxuqe3e', 'template_llk1kr3', form.current, 'u3VKSe_ZOElJO752r')
+    emailjs.sendForm('service_qxuqe3e', 'template_llk1kr3', form.current, 'u3VKSe_ZOElJO752r',)
       .then((result) => {
-          console.log(result.text);
+        console.log(result.text);
       }, (error) => {
-          console.log(error.text);
+        console.log(error.text);
       });
-      alert('Your Details Has Sent Successfully')
-      setFname('')
-      setlname('')
-      setMobile('')
-      setEmail('')
-      setMsg('')
-    }
+    alert('Your Details Has Sent Successfully')
+    setFname('')
+    setlname('')
+    setMobile('')
+    setEmail('')
+    setMsg('')
+  }
 
   return (
     <div className='careers'>
@@ -118,16 +122,16 @@ const Careers = () => {
           <h2>Ready For Your New Job?</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin semper faucibus velit.</p>
           <div>
-            <form ref={form} onSubmit={sendEmail}>
+            <form ref={form} enctype="multipart/form-data" method="post" onSubmit={sendEmail}>
               <div className='Name' style={{ display: "flex", gap: "1rem" }}>
                 <div class="Form-group Input">
                   <label for="exampleInputEmail1">First Name</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter FirstName"  name='user_firstname' value={fname} onChange={(e)=>setFname(e.target.value)}  required />
+                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter FirstName" name='user_firstname' value={fname} onChange={(e) => setFname(e.target.value)} required />
 
                 </div>
                 <div class="Form-group Input">
                   <label for="exampleInputEmail1">Last Name</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter LastName"  name='fuser_lastname' value={lname} onChange={(e)=>setlname(e.target.value)} required />
+                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter LastName" name='fuser_lastname' value={lname} onChange={(e) => setlname(e.target.value)} required />
                 </div>
 
               </div>
@@ -135,23 +139,22 @@ const Careers = () => {
               <div className='Name' style={{ display: "flex", gap: "1rem" }}>
                 <div class="Form-group Input">
                   <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"  name='fuser_email ' value={email} onChange={(e)=>setEmail(e.target.value)} required />
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name='fuser_email ' value={email} onChange={(e) => setEmail(e.target.value)} required />
                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div class="Form-group Input">
                   <label for="exampleInputPassword1">Mobile Number</label>
-                  <input type="tel" class="form-control" id="exampleInputPassword1"  name='fuser_contact' value={mobile} onChange={(e)=>setMobile(e.target.value)} placeholder="Enter Mobile" required />
+                  <input type="tel" class="form-control" id="exampleInputPassword1" name='fuser_contact' value={mobile} onChange={(e) => setMobile(e.target.value)} placeholder="Enter Mobile" required />
                 </div>
               </div>
+            
+                <div class="Form-group Input">
+                  <label class="form-check-label" for="exampleCheck1">Message</label>
 
+                  <textarea name="message" id="" cols="50" class="form-control" rows="5" value={msg} onChange={(e) => setMsg(e.target.value)}></textarea>
+                </div>
 
-              <div class="Form-group Input">
-                <label class="form-check-label" for="exampleCheck1">Message</label>
-
-                <textarea name="message" id="" cols="50" class="form-control" rows="5"   value={msg} onChange={(e)=>setMsg(e.target.value)}></textarea>
-              </div>
-              
-              <button type="submit" class="btn btn-warning fw-bold submit">Submit</button>
+                <button type="submit" class="btn btn-warning fw-bold submit">Submit</button>
             </form>
 
           </div>
