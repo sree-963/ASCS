@@ -192,7 +192,7 @@ const Homepage = () => {
           <hr />
         </div>
       </div>
-      <div class="ourclients" data-aos='flip-down'>
+      <div class="ourclients" data-aos='flip-left'>
 
         <div class="client">
           <img src={require('../../Assests/client1.jpg')} alt="" />
